@@ -50,12 +50,34 @@
 <script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
 <!-- 自定义脚本 -->
-<script src="js/common.js"></script>
+<%--<script src="js/common.js"></script>--%>
 <!-- 自定义js -->
+<%--<script>--%>
+    <%--ttshop.registerMenuEvent();--%>
+<%--</script>--%>
+
+<%--<script>--%>
+
+    <%--$(function(){--%>
+        <%--var $ul=$("#menu.easyui-tree");--%>
+        <%--console.log($ul);--%>
+
+    <%--});--%>
+<%--</script>--%>
 <script>
-    ttshop.registerMenuEvent();
+    $(function(){
+        $("#menu .easyui-tree").tree({
+            onClick:function (node) {
+                console.log(node.attributes.href);
+                console.log(node.text);
+                $("#tab").tabs('add',{
+                    title:'新增商品',
+                    content:'Tab Body',
+                    closable:true
+                });
+            }
+        });
+    });
 </script>
-
-
 </body>
 </html>
