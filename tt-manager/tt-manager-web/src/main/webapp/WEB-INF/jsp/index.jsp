@@ -49,32 +49,31 @@
 <!-- jquery easyui -->
 <script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
-<!-- 自定义脚本 -->
+<%--<!-- 自定义脚本 -->--%>
 <%--<script src="js/common.js"></script>--%>
-<!-- 自定义js -->
+<%--<!-- 自定义js -->--%>
 <%--<script>--%>
     <%--ttshop.registerMenuEvent();--%>
 <%--</script>--%>
 
-<%--<script>--%>
-
-    <%--$(function(){--%>
-        <%--var $ul=$("#menu.easyui-tree");--%>
-        <%--console.log($ul);--%>
-
-    <%--});--%>
-<%--</script>--%>
 <script>
+
     $(function(){
         $("#menu .easyui-tree").tree({
             onClick:function (node) {
-                console.log(node.attributes.href);
-                console.log(node.text);
-                $("#tab").tabs('add',{
-                    title:'新增商品',
-                    content:'Tab Body',
-                    closable:true
-                });
+                var href = node.attributes.href;
+                var text = node.text;
+                if($("#tab").tabs('exists',text)){
+                    $("#tab").tabs('select',text)
+
+                }else{
+                    $("#tab").tabs('add',{
+                        title:text,
+                        href:href,
+                        closable:true
+                    });
+                }
+
             }
         });
     });

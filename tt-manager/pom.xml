@@ -21,7 +21,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dhc</groupId>
+            <groupId>com.wsd</groupId>
             <artifactId>tt-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
