@@ -14,13 +14,13 @@ public class TbItemCustomMapperTest {
 
     @Autowired
     private TbItemCustomMapper itemDaoCustom;
-    @Test
-    public void listItemsByPage() throws Exception {
-        Page page = new Page();
-        page.setRows(10);
-        page.setPage(1);
-        System.out.println(itemDaoCustom.listItemsByPage(page).size());
-    }
+//    @Test
+//    public void listItemsByPage() throws Exception {
+//        Page page = new Page();
+//        page.setRows(10);
+//        page.setPage(1);
+//        System.out.println(itemDaoCustom.listItemsByPage(page).size());
+//    }
 
     @Test
     public void countItem() throws Exception {

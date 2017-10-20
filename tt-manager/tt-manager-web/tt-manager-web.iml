@@ -31,7 +31,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="tt-common" />
     <orderEntry type="module" module-name="tt-manager-service" />
     <orderEntry type="module" module-name="tt-manager-dao" />
     <orderEntry type="module" module-name="tt-manager-pojo" />
